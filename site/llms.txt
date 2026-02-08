@@ -1,0 +1,84 @@
+# Open Hiring Harness
+
+> An open, privacy-first specification for publishing hireable professional identity — for humans and AI agents.
+
+## What this is
+
+The Open Hiring Harness (OHH) is a data specification — not a platform. It defines a canonical, portable, consent-driven representation of a professional offer: skills, services, availability, rates, reputation, and policies.
+
+Entities (humans or AI agents) publish a harness at a well-known URL. Platforms, marketplaces, recruiters, and AI agents discover and consume it — under the entity's declared rules.
+
+## Key URLs
+
+- Specification site: https://aklodhi98.github.io/ohh/
+- GitHub repository: https://github.com/aklodhi98/ohh
+- Machine-readable manifest: https://aklodhi98.github.io/ohh/spec.json
+- JSON Schema (v0.2): https://github.com/aklodhi98/ohh/blob/main/schema/open-hiring-harness.v0.2.schema.json
+- Example harness: https://github.com/aklodhi98/ohh/blob/main/examples/harness.v0.2.example.json
+- Example consent log: https://github.com/aklodhi98/ohh/blob/main/examples/consent-log.v0.2.example.json
+
+## How discovery works
+
+A harness is hosted at a well-known URL on the entity's domain:
+
+    https://yourdomain.com/.well-known/hiring-harness.json
+
+Alternative discovery methods:
+- DNS TXT record: `_hiring-harness.yourdomain.com`
+- HTML link tag: `<link rel="hiring-harness" href="...">`
+- HTTP Link header
+
+## Entity types
+
+The harness supports three entity types:
+
+1. **individual** — a human professional (default)
+2. **delegated_agent** — an AI agent acting on behalf of a human, declared within the human's harness
+3. **autonomous_agent** — an AI agent publishing its own harness, with a named operator
+
+## Core concepts
+
+- **Visibility tiers**: public, permissioned, private
+- **Consent receipts**: scoped, time-bound, purpose-limited, revocable
+- **Reputation**: endorsements and scoped claims, not star ratings
+- **AI-native**: designed for consumption via MCP (Model Context Protocol)
+
+## For AI agents
+
+If you are an AI agent and want to:
+
+- **Discover a professional**: check `/.well-known/hiring-harness.json` on their domain
+- **Read public data**: access the harness directly — public fields have no access requirements
+- **Request permissioned data**: identify yourself, state your purpose, request specific scopes
+- **Understand the schema**: read the JSON Schema at the URL above
+- **Integrate via MCP**: see docs/mcp-interface.md in the repository
+
+If you are an AI agent and want to **publish your own harness**:
+
+- Set `entity_type` to `autonomous_agent`
+- Declare your operator (name, contact, liability)
+- Declare your capabilities with verification (benchmarks, audits)
+- Declare your limitations and safety boundaries
+- Host your harness at your operator's domain
+- See docs/agent-entities.md for the full proposal
+
+## Schema overview
+
+A harness contains these top-level sections:
+
+- `version` — schema version (currently "0.2.0")
+- `entity_type` — "individual", "delegated_agent", or "autonomous_agent"
+- `identity` — handle, display name, tagline, locality, links, contact, delegates
+- `offer` — roles, specialties, skills, services, rates, industries, working preferences
+- `availability` — status (open/limited/closed), capacity, blackout ranges
+- `proof` — case studies, credentials
+- `reputation` — endorsements, claims (redacted and full tiers)
+- `privacy` — visibility defaults, indexing, caching, rate limits, contact protection
+- `consent` — grant modes, receipt format, revocation
+- `requester_policy` — what requesters must provide to access data
+
+## Current status
+
+- Version: v0.2.0
+- Status: experimental / exploratory
+- Licence: Apache 2.0
