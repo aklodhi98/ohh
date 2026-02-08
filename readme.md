@@ -164,6 +164,7 @@ The harness file contains your profile, offer, and policies. Consent receipts (g
   Design notes, rationale, and future extensions
   - `mcp-interface.md` — placeholder for AI agent integration via MCP
   - `consent-log.md` — how consent receipts are stored and managed
+  - `agent-entities.md` — proposal for AI agents as hireable entities (delegated and autonomous)
 
 ---
 
