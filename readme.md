@@ -240,7 +240,7 @@ These are *features*, not bugs.
 
 ## Licence
 
-MIT (or Apache 2.0 — TBD)
+MIT
 
 This specification is free to use, extend, fork, and embed.
 
