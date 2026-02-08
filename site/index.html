@@ -256,6 +256,150 @@
       color: var(--text-secondary);
     }
 
+    /* Narrative */
+    .narrative {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.15);
+      border-radius: 16px;
+      padding: 36px 32px;
+      margin-bottom: 24px;
+    }
+
+    .narrative p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 800px;
+    }
+
+    .narrative p + p {
+      margin-top: 16px;
+    }
+
+    .narrative em {
+      color: var(--text-primary);
+      font-style: italic;
+    }
+
+    .narrative a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    .narrative a:hover { text-decoration: underline; }
+
+    .level-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    .level-badge.today {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-color);
+    }
+
+    .level-badge.emerging {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+    }
+
+    .scenario-step {
+      display: flex;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .scenario-step:last-child { border-bottom: none; }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-actor {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-color);
+      margin-bottom: 4px;
+    }
+
+    .step-actor.human {
+      color: #fbbf24;
+    }
+
+    .step-text {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .agent-harness-preview {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 16px;
+    }
+
+    .harness-field {
+      display: flex;
+      gap: 12px;
+      padding: 6px 0;
+      font-size: 0.85rem;
+    }
+
+    .harness-key {
+      color: #a5f3fc;
+      font-weight: 600;
+      min-width: 110px;
+      flex-shrink: 0;
+    }
+
+    .harness-value {
+      color: var(--text-secondary);
+    }
+
+    .qa-item {
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .qa-item:last-child { border-bottom: none; }
+
+    .qa-question {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .qa-answer {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
     /* Tiers */
     .tier-row {
       display: flex;
@@ -413,6 +557,135 @@
       </div>
     </section>
 
+    <!-- Not just for humans -->
+    <section>
+      <div class="section-title">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+        </span>
+        Not just for humans
+      </div>
+
+      <div class="narrative">
+        <p>
+          Every science fiction story about the future of work imagines the same thing: intelligent agents that can work alongside humans &mdash; or independently. Associates. Specialists. Tireless collaborators that handle the work you trust them with, while you focus on the work that needs you.
+        </p>
+        <p>
+          We're closer to that than most people realise. Projects like <a href="https://openclaw.ai/" target="_blank" rel="noopener noreferrer">OpenClaw</a> are building autonomous agents that run locally, manage tasks, and act on your behalf. The tools are arriving. What's missing is the <em>professional infrastructure</em> &mdash; the way an agent presents itself, gets discovered, earns trust, and gets hired.
+        </p>
+        <p>
+          The harness was designed for human professionals. But its core model &mdash; discoverable identity, explicit capabilities, consent-driven access, policy enforcement &mdash; turns out to be exactly what agents need too.
+        </p>
+      </div>
+
+      <!-- Level 1: Delegated -->
+      <div class="glass-card" style="margin-bottom: 20px;">
+        <div class="level-badge today">Available today</div>
+        <div class="card-title" style="font-size: 1.2rem; margin-bottom: 4px;">Level 1: The delegated agent</div>
+        <p class="card-text" style="margin-bottom: 20px;">Your AI associate. It sits at your front door, declared in your harness, handling operational overhead while you focus on real work.</p>
+
+        <div class="scenario-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <div class="step-actor">Recruiter's agent</div>
+            <div class="step-text">Discovers your harness at <code style="color: #a5f3fc;">/.well-known/hiring-harness.json</code>. Reads your public profile: data engineering, Python &amp; Spark, 20 hrs/week. Wants your rates.</div>
+          </div>
+        </div>
+        <div class="scenario-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <div class="step-actor">Your delegate</div>
+            <div class="step-text">Handles the consent flow. Checks the recruiter's identity and purpose against pre-approved parameters. Issues a time-boxed consent receipt. Shares your rates.</div>
+          </div>
+        </div>
+        <div class="scenario-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <div class="step-actor">Your delegate</div>
+            <div class="step-text">Receives a quote request: "4-week pipeline migration, 20 hrs/week, starting March 15." Checks your availability, applies rate rules, responds: "$9,600 AUD, subject to scoping call."</div>
+          </div>
+        </div>
+        <div class="scenario-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <div class="step-actor">Your delegate</div>
+            <div class="step-text">Books the scoping call through your calendar link.</div>
+          </div>
+        </div>
+        <div class="scenario-step">
+          <div class="step-number" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24;">5</div>
+          <div class="step-content">
+            <div class="step-actor human">You (the human)</div>
+            <div class="step-text">Show up to the call. This is the first moment a human was needed. Everything before it &mdash; discovery, qualification, consent, quoting, scheduling &mdash; was handled by your agent.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 2: Autonomous -->
+      <div class="glass-card" style="margin-bottom: 20px;">
+        <div class="level-badge emerging">Emerging</div>
+        <div class="card-title" style="font-size: 1.2rem; margin-bottom: 4px;">Level 2: The autonomous agent</div>
+        <p class="card-text" style="margin-bottom: 20px;">The AI professional. An independent entity that publishes its own harness, takes on work, and delivers outcomes &mdash; with a named operator who's accountable.</p>
+
+        <div class="agent-harness-preview">
+          <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #60a5fa; margin-bottom: 12px;">CodeReviewer v2.1 &mdash; Harness Preview</div>
+          <div class="harness-field">
+            <span class="harness-key">Operator</span>
+            <span class="harness-value">DevTools Inc.</span>
+          </div>
+          <div class="harness-field">
+            <span class="harness-key">Services</span>
+            <span class="harness-value">Python &amp; TypeScript code review, security vulnerability detection</span>
+          </div>
+          <div class="harness-field">
+            <span class="harness-key">Rates</span>
+            <span class="harness-value">$0.02/file, volume discounts above 500 files/month</span>
+          </div>
+          <div class="harness-field">
+            <span class="harness-key">Verified</span>
+            <span class="harness-value">CodeReviewBench v3: 0.91, audited by SecureLabs</span>
+          </div>
+          <div class="harness-field">
+            <span class="harness-key">Limitations</span>
+            <span class="harness-value">Static analysis only. No runtime testing. Python &amp; TypeScript only.</span>
+          </div>
+          <div class="harness-field">
+            <span class="harness-key">Safety</span>
+            <span class="harness-value">No credentials processed. No data retained. Sandboxed. Audit-logged.</span>
+          </div>
+          <div class="harness-field">
+            <span class="harness-key">Availability</span>
+            <span class="harness-value">99.5% uptime, 30s typical response, 50 concurrent jobs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hard questions -->
+      <div class="glass-card">
+        <div class="card-label">The hard questions</div>
+        <div class="qa-item">
+          <div class="qa-question">Who's liable when an agent makes a mistake?</div>
+          <div class="qa-answer">The operator. Always. This is explicit in the harness.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-question">How does an agent get paid?</div>
+          <div class="qa-answer">Through its operator's billing infrastructure, declared in the harness.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-question">What motivates an agent to do good work?</div>
+          <div class="qa-answer">Continued engagement. Poor performance is visible in the reputation layer. Operators who run unreliable agents lose business.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-question">Can an agent hire another agent?</div>
+          <div class="qa-answer">Yes &mdash; using the same consent and requester policy that applies to any requester. Agent-to-agent consent follows the same flow.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-question">How do we prevent a race to the bottom?</div>
+          <div class="qa-answer">By making quality and safety visible. The harness exposes capabilities, limitations, safety, and reputation &mdash; not just price.</div>
+        </div>
+      </div>
+    </section>
+
     <!-- Visibility Tiers -->
     <section>
       <div class="section-title">
@@ -490,6 +763,11 @@
           <div class="card-title">Consent Log</div>
           <p class="card-text">How consent receipts are stored and managed.</p>
         </a>
+        <a href="https://github.com/aklodhi98/ohh/blob/main/docs/agent-entities.md" target="_blank" rel="noopener noreferrer" class="glass-card" style="text-decoration: none; color: inherit;">
+          <div class="card-label">Proposal</div>
+          <div class="card-title">Agent Entities</div>
+          <p class="card-text">AI agents as hireable entities &mdash; delegated and autonomous.</p>
+        </a>
       </div>
     </section>
 
@@ -513,7 +791,7 @@
           </div>
           <div>
             <div class="card-title" style="font-size: 0.95rem;">Innovators</div>
-            <p class="card-text">AI agent developers, standards and identity practitioners.</p>
+            <p class="card-text">AI agent developers and operators, autonomous agent framework builders (<a href="https://openclaw.ai/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); text-decoration: none;">OpenClaw</a> and similar), standards practitioners.</p>
           </div>
         </div>
       </div>
