@@ -1,0 +1,224 @@
+{
+  "version": "0.2.0",
+
+  "identity": {
+    "handle": "adnanlodhi",
+    "display_name": "Adnan Lodhi",
+    "tagline": "UX & service design for complex systems; pragmatic, outcomes-first.",
+    "time_zone": "Australia/Sydney",
+    "locality": { "city": "Canberra", "region": "ACT", "country": "AU" },
+    "languages": ["English", "Urdu"],
+    "links": {
+      "website": "https://aklodhi.com",
+      "portfolio": "https://aklodhi.com",
+      "linkedin": "https://www.linkedin.com/in/your-handle",
+      "github": "https://github.com/your-handle",
+      "calendar_booking": "https://calendly.com/your-link"
+    },
+    "contact": {
+      "visibility": "private",
+      "cache_ttl_minutes": 0,
+      "scopes_required": ["read:contact"],
+      "data": {
+        "public_email": "",
+        "contact_form": "https://aklodhi.com/contact"
+      }
+    }
+  },
+
+  "offer": {
+    "roles": ["UX Designer", "Service Designer", "UX Design Assurance"],
+    "specialties": [
+      "Government & public services",
+      "Complex workflows and service blueprints",
+      "UX audits and design review systems"
+    ],
+    "skills": [
+      {
+        "name": "Service design",
+        "level": "expert",
+        "evidence": ["https://aklodhi.com"]
+      },
+      {
+        "name": "UX audit / heuristics",
+        "level": "strong",
+        "evidence": ["https://aklodhi.com"]
+      },
+      {
+        "name": "Workshop facilitation",
+        "level": "strong",
+        "evidence": ["https://aklodhi.com"]
+      }
+    ],
+    "services": [
+      {
+        "id": "ux_audit",
+        "name": "UX audit (practical, prioritised)",
+        "description": "Rapid UX + accessibility scan with severity, quick wins, and a roadmap aligned to delivery constraints.",
+        "outcomes": ["Findings report", "Prioritised backlog", "1–2 stakeholder readouts"],
+        "typical_duration_days": 5,
+        "delivery_mode": ["remote", "hybrid"],
+        "min_engagement_days": 3,
+        "constraints": [
+          "Requires access to staging or recordings; NDA ok.",
+          "Best results with 60–90 min stakeholder walkthrough."
+        ]
+      },
+      {
+        "id": "service_blueprint",
+        "name": "Service blueprint + operating model",
+        "description": "End-to-end blueprint covering journeys, backstage processes, roles, handoffs, and failure points.",
+        "outcomes": ["Blueprint", "Journey map", "Risks + opportunities", "Next-step experiment plan"],
+        "typical_duration_days": 10,
+        "delivery_mode": ["remote", "hybrid"],
+        "min_engagement_days": 5,
+        "constraints": ["Best with 4–6 stakeholder interviews."]
+      },
+      {
+        "id": "design_assurance",
+        "name": "Design assurance system (lightweight and repeatable)",
+        "description": "Set up a simple review cadence, artefact checklist, and feedback loops so teams get early, frequent design input without slowing delivery.",
+        "outcomes": ["Assurance playbook", "Review templates", "Pilot run + calibration"],
+        "typical_duration_days": 7,
+        "delivery_mode": ["remote", "hybrid"],
+        "min_engagement_days": 5,
+        "constraints": ["Needs agreement on decision rights and delivery rhythm."]
+      }
+    ],
+    "rates": {
+      "visibility": "permissioned",
+      "cache_ttl_minutes": 60,
+      "scopes_required": ["read:rates"],
+      "data": {
+        "currency": "AUD",
+        "units": [
+          { "unit": "day", "amount": 1200, "notes": "Standard delivery rate" },
+          { "unit": "hour", "amount": 180, "notes": "Advisory / short consults" }
+        ],
+        "rate_rules": [
+          "Urgent work (<7 days notice) +25%",
+          "Minimum booking: 2 hours for advisory, 3 days for delivery",
+          "Discounts possible for longer engagements (>4 weeks)"
+        ]
+      }
+    },
+    "industries": ["GovTech", "Education", "B2B SaaS"],
+    "working_preferences": {
+      "client_types": ["startup", "scale-up", "government"],
+      "team_modes": ["embedded", "audit-only", "workshop-led"]
+    }
+  },
+
+  "availability": {
+    "summary": {
+      "visibility": "public",
+      "cache_ttl_minutes": 1440,
+      "scopes_required": [],
+      "data": {
+        "status": "limited",
+        "weekly_capacity_hours": 15,
+        "available_from": null
+      }
+    },
+    "detail": {
+      "visibility": "private",
+      "cache_ttl_minutes": 0,
+      "scopes_required": ["read:availability_detail"],
+      "data": {
+        "notes": "Prefer Tue–Thu blocks; evenings ok for advisory. Exact slots shared only after a confirmed scoping call.",
+        "blackout_ranges": [
+          { "start_date": "2026-03-28", "end_date": "2026-04-06", "reason": "Family travel" }
+        ]
+      }
+    }
+  },
+
+  "proof": {
+    "visibility": "public",
+    "cache_ttl_minutes": 10080,
+    "scopes_required": [],
+    "data": {
+      "case_studies": [
+        {
+          "title": "Selected work & writing",
+          "url": "https://aklodhi.com",
+          "tags": ["ux", "service-design", "gov"]
+        }
+      ],
+      "credentials": [
+        "UX / Service design practitioner; MDT programme experience (details on request).",
+        "Focus: complex services, practical delivery alignment, and humane constraints."
+      ]
+    }
+  },
+
+  "reputation": {
+    "redacted": {
+      "visibility": "permissioned",
+      "cache_ttl_minutes": 60,
+      "scopes_required": ["read:reputation_redacted"],
+      "data": {
+        "endorsements": [
+          {
+            "id": "end_2f1a9c3d",
+            "statement": "Adnan rapidly clarified the service model and reduced decision churn; the blueprint became our delivery backbone.",
+            "issuer": {
+              "name": "Jane D.",
+              "org": "Gov Agency (redacted)",
+              "contact": "",
+              "verification": { "method": "email_domain", "proof": "redacted.gov.au" }
+            },
+            "scope_tags": ["service_design", "blueprint"],
+            "issued_at": "2025-11-02T09:15:00Z",
+            "redaction_level": "partial"
+          }
+        ],
+        "claims": [
+          { "type": "years_experience", "value": 12, "evidence": "Portfolio timeline: https://aklodhi.com" },
+          { "type": "repeat_clients", "value": 6, "evidence": "Available on request (NDAs apply)" }
+        ]
+      }
+    },
+    "full": {
+      "visibility": "private",
+      "cache_ttl_minutes": 0,
+      "scopes_required": ["read:reputation_full"],
+      "data": {
+        "endorsements": [],
+        "claims": []
+      }
+    }
+  },
+
+  "privacy": {
+    "default_visibility": "public",
+    "indexing": { "allow": true, "robots_policy": "allow", "allow_search_engines": true },
+    "caching": {
+      "public_ttl_minutes": 10080,
+      "permissioned_ttl_minutes": 60,
+      "private_ttl_minutes": 0
+    },
+    "rate_limits": { "anonymous_per_minute": 10, "identified_per_minute": 120 },
+    "contact_protection": {
+      "expose_email": "never",
+      "expose_calendar_link": "public",
+      "preferred_lead_routing": "calendar"
+    }
+  },
+
+  "consent": {
+    "required_for": ["permissioned", "private"],
+    "grant_modes": ["one_time", "timeboxed", "standing"],
+    "max_standing_grant_days": 30,
+    "receipt_format": "consent_receipt_v1",
+    "log_location": "/.well-known/hiring-consent-log.json",
+    "revocation": { "supported": true, "endpoint": "harness://consent/revoke" }
+  },
+
+  "requester_policy": {
+    "require_requester_identity": true,
+    "require_purpose": true,
+    "require_scopes": true,
+    "deny_if_missing": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "harness_handle": "adnanlodhi",
+
+  "receipts": [
+    {
+      "receipt_version": "consent_receipt_v1",
+      "receipt_id": "cr_8f4c2b19",
+      "granted_to": {
+        "id": "platform_example_001",
+        "name": "Example Platform",
+        "type": "platform",
+        "website": "https://exampleplatform.invalid"
+      },
+      "purpose": "Evaluate candidate fit and prepare a quote for ClientCo",
+      "scopes": ["read:rates", "read:reputation_redacted", "action:request_quote"],
+      "issued_at": "2026-01-29T10:05:00Z",
+      "expires_at": "2026-01-30T10:05:00Z",
+      "cache_ttl_minutes": 60,
+      "revocable": true,
+      "revoked": false
+    }
+  ]
+}
